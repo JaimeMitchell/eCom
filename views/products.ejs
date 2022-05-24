@@ -10,12 +10,24 @@
 
 <body>
     <h1>Products Page</h1>
-      <!-- REMEMBER NOT TO USE FILE PATH NAMES. This is a url, so home is just '/' -->
+    <!-- REMEMBER NOT TO USE FILE PATH NAMES. This is a url, so home is just '/' -->
     <nav>
         <li><a href="/">Home</a></li>
-        <li><a href="/new">New</a></li>
+        <li><a href="/products/new">New</a></li>
     </nav>
+    <ul>
+        <% data.map((productData)=>{%>
+            <li>
+                <%=productData.id%>
+                    <%=productData.title%>
+                        <%=productData.description%>
+                            <%=productData.price%>
 
+            </li>
+
+            <%})%>
+
+    </ul>
 </body>
 
 </html>
