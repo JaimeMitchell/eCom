@@ -1,0 +1,25 @@
+{
+  "name": "ecom",
+  "version": "1.0.0",
+  "description": "MVC e-Commerce app Lab",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaimeMitchell/eCom.git"
+  },
+  "keywords": [],
+  "author": "Jaime",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaimeMitchell/eCom/issues"
+  },
+  "homepage": "https://github.com/JaimeMitchell/eCom#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}
