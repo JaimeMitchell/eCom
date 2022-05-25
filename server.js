@@ -5,7 +5,7 @@ const app = express()
 //SETUP CONTROLLER AND CALL PRODUCTS FUNCTION
 const dataController = require('./controllers/getData')
 const productData = dataController.getProducts()
-
+const product = require('./models/products')
 // Middleware is a function
 //they update the request as soon as they come in.
 app.use((req, res, next) => {
@@ -38,10 +38,15 @@ app.get('/products/new', (req, res) => {
 })
 
 //REMEMBER SPECIFICITY OF ROUTE. This should be below general routes
-//SETUP PRODUCT ID ROUTE
+//SETUP PRODUCT ID ROUTE :id is the key the browser number is the value. 
 app.get('/products/:id',(req,res)=>{
-    res.render('products',{data: productData})
-})
+    const result = productData.filter(item => item.id === Number(req.params.id))
+    if(result.length === 0){
+       
+            res.status(404).render('404')
+        }
+                else{ res.render('search', {productData: result[0]})}})
+
 
 
 app.post('/products',(req,res)=>{
