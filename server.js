@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 
 //SETUP PRODUCTS ROUTE 
 app.get('/products', (req, res) => {
-    res.render('products',{data: productData})
+    res.render('products',{items: productData})
     res.send(productData)
 })
 //SETUP NEW ROUTE

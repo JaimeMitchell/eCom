@@ -17,7 +17,7 @@
     </nav>
     <ul>
 
-        <% data.map( (productData)=> { %>
+        <% items.map( (productData)=> { %>
             <li> <h6><%= productData.id %></h6> 
             <% if(productData.images != undefined) { %>
                 <img src= <%=productData.images[0] %>/> <%}%>
